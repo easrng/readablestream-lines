@@ -1,7 +1,7 @@
-import streamLines from "./stream-lines.js";
+import linesIterator from "./lines-iterator.js";
 const { body } = new Response("{}\n".repeat(1000000));
 const array = [];
-for await (let line of streamLines(body)) {
+for await (let line of linesIterator(body)) {
   array.push(JSON.parse(line));
 }
 if (array.length == 1000000) {

@@ -1,14 +1,14 @@
 {
-  "name": "stream-lines",
+  "name": "lines-iterator",
   "version": "1.0.0",
   "description": "split a ReadableStream into an AsyncIterator of lines",
-  "exports": "./stream-lines.js",
+  "exports": "./lines-iterator.js",
   "scripts": {
     "test": "node ./test.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/easrng/stream-lines.git"
+    "url": "git+https://github.com/easrng/lines-iterator.git"
   },
   "keywords": [
     "ReadableStream",
@@ -21,8 +21,8 @@
   "author": "easrng",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/easrng/stream-lines/issues"
+    "url": "https://github.com/easrng/lines-iterator/issues"
   },
-  "homepage": "https://github.com/easrng/stream-lines#readme",
+  "homepage": "https://github.com/easrng/lines-iterator#readme",
   "type": "module"
 }
