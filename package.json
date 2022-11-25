@@ -1,0 +1,28 @@
+{
+  "name": "stream-lines",
+  "version": "1.0.0",
+  "description": "split a ReadableStream into an AsyncIterator of lines",
+  "exports": "./stream-lines.js",
+  "scripts": {
+    "test": "node ./test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/easrng/stream-lines.git"
+  },
+  "keywords": [
+    "ReadableStream",
+    "AsyncIterator",
+    "ndjson",
+    "jsonl",
+    "fetch",
+    "stream"
+  ],
+  "author": "easrng",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/easrng/stream-lines/issues"
+  },
+  "homepage": "https://github.com/easrng/stream-lines#readme",
+  "type": "module"
+}

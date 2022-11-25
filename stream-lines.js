@@ -1,18 +1,19 @@
-export default async function* streamLines(stream) {
-  let buf = "";
-  const reader = stream.pipeThrough(new TextDecoderStream()).getReader();
+export default async function* streamLines(stream, decode = true) {
+  if (decode) stream = stream.pipeThrough(new TextDecoderStream());
+  const reader = stream.getReader();
+  let buffer = "";
   let current;
   while ((current = await reader.read())) {
     if (current.done) {
-      if (buf) yield buf;
+      if (buffer) yield buffer;
       return;
     } else {
       for (let i = 0; i < current.value.length; i++) {
         if (current.value[i] == "\n") {
-          yield buf;
-          buf = "";
+          yield buffer;
+          buffer = "";
         } else {
-          buf += current.value[i];
+          buffer += current.value[i];
         }
       }
     }

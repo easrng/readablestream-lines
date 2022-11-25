@@ -1,2 +1,2 @@
 # stream-lines
-process lines in a fetch response as they come in
+split a ReadableStream into an AsyncIterator of lines
