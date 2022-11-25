@@ -1,7 +1,7 @@
-import linesIterator from "./lines-iterator.js";
+import fn from "./index.js";
 const { body } = new Response("{}\n".repeat(1000000));
 const array = [];
-for await (let line of linesIterator(body)) {
+for await (let line of fn(body)) {
   array.push(JSON.parse(line));
 }
 if (array.length == 1000000) {

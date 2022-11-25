@@ -1,4 +1,4 @@
-export default async function* linesIterator(stream, decode = true) {
+export default async function* (stream, decode = true) {
   if (decode) stream = stream.pipeThrough(new TextDecoderStream());
   const reader = stream.getReader();
   let buffer = "";
